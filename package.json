@@ -1,0 +1,19 @@
+{
+  "name": "accentquiz",
+  "version": "1.0.0",
+  "description": "An online fashion quiz game that elevates your capacity to make easy fashion decisions in your day to day life",
+  "main": "accent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bridgetakankunda/accentquiz.git"
+  },
+  "author": "Bridget Akankunda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bridgetakankunda/accentquiz/issues"
+  },
+  "homepage": "https://github.com/bridgetakankunda/accentquiz#readme"
+}
