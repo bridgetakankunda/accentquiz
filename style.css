@@ -22,19 +22,9 @@
     background-image: url(/images/photo-1569397288884-4d43d6738fbd.jpeg);
     background-position: center;
     background-size: cover;
-    
+     
   }
 
-
-  
-  /* body.correct {
-    --hue: var(--hue-correct);
-  }
-  
-  body.wrong {
-    --hue: var(--hue-wrong);
-  }
-   */
   .container {
     width: 800px;
     max-width: 80%;
@@ -108,5 +98,5 @@
   .answer{
       width: 30%;
   }
-  
+
 
