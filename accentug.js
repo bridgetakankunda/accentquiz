@@ -3,6 +3,11 @@ const nextButton = document.getElementById('next')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer')
+const questionNumber = document.getElementById('question-number')
+const correctDiv = document.getElementById('correctDiv');
+
+let count = 0, correctValue = 0;
+
 
 //local variables .
 let shuffledQuestions, currentQuestionIndex
@@ -22,8 +27,10 @@ function startGame() {
 }
 
 function setNextQuestion() {
+  questionCount(questions)
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
+  
 }
 
 function showQuestion(question) {
@@ -51,6 +58,7 @@ function resetState() {
 function selectAnswer(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
+  // correctDiv.innerHTML = correctValue++;
   setStatusClass(document.body, correct)
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
@@ -58,6 +66,7 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
+    count = 0
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
   }
@@ -75,6 +84,12 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
+}
+
+function questionCount(questions){
+  count++;
+  questionNumber.innerHTML = `${ count == 1 ? 0 : count - 1 } / ${questions.length}`
+  
 }
 
 const questions = [
